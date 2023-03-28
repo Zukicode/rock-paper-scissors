@@ -1,0 +1,99 @@
+@import 'styles/colors.scss';
+
+.button {
+	width: 200px;
+	height: 200px;
+	background-color: #e5e5e5;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+
+	@media (max-width: 550px) {
+		width: 150px;
+		height: 150px;
+	}
+
+	@media (max-width: 390px) {
+		width: 100px;
+		height: 100px;
+	}
+
+	.border {
+		width: 101%;
+		height: 101%;
+		border-radius: 50%;
+		position: absolute;
+		z-index: 1;
+		transition: all 0.4s;
+
+		&.rock {
+			border: 20px solid $rock-gradient;
+
+			@media (max-width: 390px) {
+				border: 10px solid $rock-gradient;
+			}
+
+			&:hover {
+				transition: all 0.4s;
+				box-shadow: 0px 0px 100px $rock-gradient;
+			}
+		}
+
+		&.scissors {
+			border: 20px solid $scissors-gradient;
+
+			@media (max-width: 390px) {
+				border: 10px solid $scissors-gradient;
+			}
+
+			&:hover {
+				transition: all 0.4s;
+				box-shadow: 0px 0px 100px $scissors-gradient;
+			}
+		}
+
+		&.paper {
+			border: 20px solid $paper-gradient;
+
+			@media (max-width: 390px) {
+				border: 10px solid $paper-gradient;
+			}
+
+			&:hover {
+				transition: all 0.4s;
+				box-shadow: 0px 0px 100px $paper-gradient;
+			}
+		}
+	}
+
+	.image {
+		width: 160px;
+		height: 160px;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #ffffff;
+		position: relative;
+		top: 5px;
+
+		@media (max-width: 550px) {
+			width: 110px;
+			height: 110px;
+		}
+
+		@media (max-width: 390px) {
+			width: 83px;
+			height: 83px;
+
+			img {
+				position: relative;
+				bottom: 2px;
+				right: 2px;
+			}
+		}
+	}
+}
