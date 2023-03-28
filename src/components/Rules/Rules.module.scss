@@ -1,0 +1,50 @@
+@import 'styles/colors.scss';
+
+.opacity {
+	width: 100%;
+	height: 100vh;
+	min-height: 700px;
+	position: absolute;
+	background-color: rgba(#000000, 0.4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+	padding: 0px 20px;
+
+	.rules {
+		width: 400px;
+		height: 400px;
+		background-color: $color-white;
+		border-radius: 12px;
+		padding: 20px;
+
+		.header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			color: $color-dark;
+			text-transform: uppercase;
+
+			button {
+				border: none;
+				background: none;
+				position: relative;
+				top: 5px;
+				cursor: pointer;
+			}
+		}
+
+		.image {
+			height: calc(100% - 50px);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			img {
+				width: 90%;
+			}
+		}
+	}
+}
